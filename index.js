@@ -1,10 +1,18 @@
-console.log("hello world!");
-
-let szam1 = 2;
-let szam2 = "3";
-szam2 = 12;
-const szam =3.14;
-
-szam = 2.79
-
-console.log(szam1 + szam2);
+const cimElem = document.getElementById("cim");
+cimElem.textContent = "kedvencek";
+ 
+let gyumolcs = document.querySelectorAll(".gyumolcs");
+gyumolcs[0].textContent = "Alma";
+ 
+gyumolcs[1].textContent=gyumolcs[2].textContent
+ 
+let divElem=document.getElementById("uzenet")
+divElem.addEventListener("click",beIr)
+ 
+function beIr(){
+    let felsElem=document.getElementById("felsorolas")
+    let inputElem=document.getElementById("kedvenc")
+    let ertek = inputElem.value
+    felsElem.insertAdjacentHTML("beforeend", `<li class='gyumolcs'>${ertek}</li>`);
+ 
+}
